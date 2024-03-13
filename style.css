@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f5f9;
+  color: #323232;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+/** Global Style*/
+.dFlex { display: flex; }
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cardProfile {
+  background-color: #FFF;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .26);
+  border-radius: 16px;
+  padding: 8px;
+  width: 80%;
+  max-width: 580px;
+}
+
+.cardProfile .cardCover {
+  background-color: #dce3ea;
+  border-radius: 8px;
+  justify-content: center;
+  gap: 20px;
+  padding: 12px 30px;
+}
+
+.cardProfile .imgProfile {
+  background-color: #d6d6d6;
+  border-radius: 100%;
+  padding: 6px;
+  height: 120px;
+  width: 120px;
+}
+
+.cardProfile .imgProfile > img {
+  border-radius: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+.cardProfile .userInfContainer { flex: 1; }
+
+.userInfContainer .usernameText {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-wrap: nowrap;
+}
+
+.userInfContainer .jobText {
+  color: rgba(50, 50, 50, .72);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 6px 0;
+}
+
+.userInfContainer .descriptionText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 150%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.userInfContainer .actionsContainer {
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.userInfContainer .actionsContainer > .btnContainer {
+  background-color: #B2F0F5;
+  border: 1px solid #323232;
+  border-radius: 12px;
+  cursor: pointer;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  height: 46px;
+  width: 120px;
+  transition: background-color .25s;
+}
+
+.userInfContainer .actionsContainer > .btnContainer:hover { background-color: #9ed7db; }
+
+@media (max-width: 640px) {
+  .cardProfile .cardCover {
+    flex-direction: column;
+    align-items: center;
+  }
+}
